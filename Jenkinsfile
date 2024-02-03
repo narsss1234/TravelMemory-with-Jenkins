@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools{
+        npm "NodeJS"
+    }
     stages{
         stage('Fetch Code'){
             steps{
