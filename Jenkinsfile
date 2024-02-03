@@ -8,10 +8,9 @@ pipeline{
         }
         stage('Build Frontend'){
             steps{
-                sh 'cd TravelMemory-with-Jenkins/frontend'
-                sh 'npm init -y'
-                sh 'npm install'
-                sh 'index.js'
+                sh '''cd TravelMemory-with-Jenkins/frontend
+                    - npm init -y
+                    - npm install index.js'''
             }
         }
     }
