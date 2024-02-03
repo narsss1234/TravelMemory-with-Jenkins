@@ -6,11 +6,9 @@ pipeline{
                 sh 'git clone https://github.com/CharismaticOwl/TravelMemory-with-Jenkins.git'
             }
         }
-        stage('Build Frontend'){
+        stage('Install'){
             steps{
-                sh '''cd TravelMemory-with-Jenkins/frontend \
-                    - npm init -y
-                    - npm install index.js'''
+                sh 'cd TravelMemory-with-Jenkins/frontend && npm install'
             }
         }
     }
